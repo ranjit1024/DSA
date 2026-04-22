@@ -5,5 +5,3 @@ int main(){
     int n = 1235;
     cout << n % 10;
 }
-
-
