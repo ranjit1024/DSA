@@ -3,7 +3,7 @@
 using namespace std;
 
 int main(){
-    int n ;
+    long long  n ;
     cin >> n;
     int ans  = 0;
     int digit = n;
