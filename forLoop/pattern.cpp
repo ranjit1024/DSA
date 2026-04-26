@@ -6,6 +6,9 @@ int main(){
     cin >> n;
 
     for(int i = 0; i <= n; i++){
-        cout << "**" << endl;
+        for(int j = 0; j <= 10; j++){
+            cout << "* ";
+        }
+        cout << endl;
     }
 }
