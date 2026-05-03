@@ -6,7 +6,7 @@ int main(){
     cin >> n;
     for(int i = 1; i <= n ; i++){
         for (int j = 1; j <= i ; j++){
-            if(i == 1  or j == 1 or j == i){
+            if(i == 1  or i == n or j == 1 or j == i){
                 cout << "* ";
             }
             else {
@@ -15,12 +15,12 @@ int main(){
         }
         cout << endl;
     }
-    for(int i = (n-1); i >= 1; i--){
+    for(int i = n-1; i >= 1; i--){
         for(int j = 1; j  <= i; j++){
-            if(i == (n-1) or i ==1 or j == 1 or j == i){
-                cout << "*";
+            if(i == n -1 or i == 1 or j == 1 or j ==i ){
+                cout << "* ";
             }
-            else {
+            else{
                 cout << " ";
             }
         }
