@@ -7,23 +7,27 @@ int main() {
 
     for(int i = 1; i <= n; i++) {
 
-       
+        
         for(int j = 1; j <= n - i; j++) {
             cout << " ";
         }
 
        
         for(int j = 1; j <= i; j++) {
-            if(j == 1 or j == i){
+            if(j == 1 or j == i  ) {
                 cout << "*";
             }
             else{
 
-                cout << "*";
+                cout << " ";
             }
-            if(j < i) cout << " ";  // only between stars
+            if(j <= i){
+                cout << " ";
+            }
+          
+           
         }
 
-        cout << endl;
+        cout << endl;  
     }
 }
