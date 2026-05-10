@@ -6,7 +6,6 @@ int main()
 {
     int n;
     cin >> n;
-    cout << n << endl;
     
     for (int i = 1; i <= n; i++)
     {
