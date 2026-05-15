@@ -4,17 +4,19 @@
 using namespace std;
 
 int main(){
-   int n;
+   long long int n;
    cin >> n;
-
-   vector<int> x(n);
-   for(int i = 1; i <= n; i++){
+   int ans = 0;
+   vector<long long> x(n);
+   for(int i = 0; i <= n; i++){
     cin >> x[i];
    }
-   cout << "Value" << endl;
-   for(int i = 1; i <= n ; i++){
-    cout << x[i] << endl;
-    
-   }
+  
+   for(int i = 0; i <= n ; i++){
+    if(18 % x[i] == 0 or x[i] % 45 == 0){
+      ans = ans +  1;
 
+    }
+   }
+   cout << ans;
 }
