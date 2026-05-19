@@ -1,9 +1,12 @@
 # include <iostream>
 using namespace std;
-int odd(int k){
-    int a = 12 + k;
-    return a;
+int factoraial(int k){
+    int ans = 1;
+    for(int i = 1; i <= k; i++){
+        ans *= i;
+    }
+    return ans;
 }
 int main(){
-    cout << odd(12);
+    cout << factoraial(5)<< endl;
 }
