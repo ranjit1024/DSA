@@ -3,7 +3,14 @@
 using namespace std;
 
 int main(){
-    int makrs[100];
-    makrs[1] = 12;
-    cout << makrs[1] << endl;
-}
+    int n;
+    cin >> n;
+    int array[n];
+    for(int i = 0; i < n; i++){
+        cin >> array[i];
+    }
+    for(int i = 0; i < n; i++){
+        cout << array[i];
+    }
+    
+} 
