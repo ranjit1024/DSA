@@ -13,5 +13,5 @@ int main(){
     for(int i = 0; i < n; i++){
         sum += array[i];
     }
-    cout << sum;
+    cout << sum << endl;
 }
