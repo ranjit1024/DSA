@@ -5,7 +5,7 @@ int main(){
     int n;
     cin >> n;
     int array[n];
-    int sum = 0;
+    long long sum = 0;
     for(int i = 0 ; i < n; i++){
         cin >> array[i];
     }
@@ -13,5 +13,5 @@ int main(){
     for(int i = 0; i < n; i++){
         sum += array[i];
     }
-    cout << sum << endl;
+    cout << sum;
 }
