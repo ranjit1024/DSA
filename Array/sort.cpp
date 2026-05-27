@@ -1,29 +1,47 @@
-# include <iostream>
+#include <iostream>
 using namespace std;
 
-int main(){
-    long long  n;
-    cin >> n;
+int main() {
 
-    long long array[n];
-    long long  ans[n];
-    for (int i = 0; i < n; i++){
-        cin >> array[i];
-    }
+    int t;
+    cin >> t;
 
-    for(int i = 0; i < n ; i++){
-        if(3 + array[i] == 3){
-            ans[i] = array[i];
+    while(t--) {
+
+        int n;
+        cin >> n;
+
+        int arr[n];
+        int ans[n];
+
+        int zero = 0;
+
+        for(int i = 0; i < n; i++) {
+            cin >> arr[i];
+
+            if(arr[i] == 0) {
+                zero++;
+            }
         }
-        else if(3 + array[i] == 4){
-            ans[i] = array[i];
+
+        for(int i = 0; i < zero; i++) {
+            ans[i] = 0;
         }
+
+        for(int i = zero; i < n; i++) {
+            ans[i] = 1;
+        }
+
+        for(int i = 0; i < n; i++) {
+
+            if(i != n - 1)
+                cout << ans[i] << " ";
+            else
+                cout << ans[i];
+        }
+
+        cout << endl;
     }
 
-    for(int i = 0;  i < n; i++){
-        cout << ans[i];
-    }
-    cout << endl;
-
-
+    return 0;
 }
