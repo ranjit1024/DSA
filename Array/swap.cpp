@@ -34,7 +34,13 @@ int main()
     }
 
     for(int i= 0; i < n; i++){
-        cout << ans[i] << " ";
+        if(i == n-1){
+            cout << ans[i];
+        }
+        else{
+            cout << ans[i] <<" ";
+        }
     }
+    cout << endl;
 }
 }
