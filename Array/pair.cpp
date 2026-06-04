@@ -9,26 +9,29 @@ int main(){
         int n;
 
         cin >> n;
-        int array[n];
+        long long  array[n];
 
         for(int i = 0; i < n; i++){
             cin >> array[i];
         }
 
-        cout << "Enter Number you want to find pair of: ";
-        int pair;
+        
+        long long  pair;
 
-        int ans;
+        long long  ans = 0;
         cin >> pair;
         for(int i = 0; i < n; i++){
             for(int j = 0; j < n ;j++){
-                if(array[i] + array[j] == pair){
-                    cout << array[i] << "+" << array[j] << "==" << pair <<  endl;
+                if(array[i] + array[j] == pair and i !=j){
+                    
                     ans++;
                 }
             }
         }
-        cout<< ans;
+        
+        cout<< ans / 2 << endl;
 
     }
 }
+
+
