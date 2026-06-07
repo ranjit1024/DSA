@@ -7,9 +7,17 @@ int main(){
     cin >> n;
     cin >> m;
 
-    int array[n];
-    for(int i =0 ; i < n; i){
-        cin >> array[i];
+    int array[n][m];
+    for(int i =0 ; i < n; i++){
+        for(int j = 0; j < n; j++){
+            cin >> array[i][j];
+        }
     }
-    cout << "Hellow Wrold";
+    for(int i =0 ; i < n; i++){
+        for(int j = 0; j < n; j++){
+            cout << array[i][j] << " ";
+           
+        }
+        cout << endl;
+    }
 }
