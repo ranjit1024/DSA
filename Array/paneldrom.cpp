@@ -37,3 +37,4 @@ int main()
 
     isPalindrom ? cout << "YES" : cout << "NO" << endl;
 }
+
