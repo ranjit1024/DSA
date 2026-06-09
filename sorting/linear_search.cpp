@@ -20,6 +20,8 @@ int main()
         if (x == Arr[i])
         {
             flag = true;
+            break;
         }
     }
+    flag == true ? cout << "YES" : cout << "NO";
 }
