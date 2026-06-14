@@ -5,7 +5,7 @@ using namespace std;
 int main() {
     int n;
     cin >> n;
-
+    bool flag =  false;
     string Arr[n];
 
     for (int i = 0; i < n; i++) {
@@ -19,11 +19,11 @@ int main() {
     int r = n - 1;
 
     while (l <= r) {
-        int mid = l + (r - l) / 2;
+        int mid = (r + l) / 2;
 
         if (Arr[mid] == x) {
-            cout << "Found at index " << mid << endl;
-            return 0;
+            flag = true;
+            break;
         }
         else if (Arr[mid] < x) {
             l = mid + 1;
@@ -32,6 +32,7 @@ int main() {
             r = mid - 1;
         }
     }
-
+    cout << flag;
+    flag ? cout << "YES" : cout << "NO";
     
 }

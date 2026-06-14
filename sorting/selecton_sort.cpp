@@ -7,6 +7,8 @@ int main(){
 
     int Arr[n];
     for(int i = 0 ; i < n; i++){
-        
+        cin >> Arr[i];
     }
+
+    
 }
