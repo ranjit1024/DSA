@@ -32,7 +32,7 @@ int main() {
             r = mid - 1;
         }
     }
-    cout << flag;
+    
     flag ? cout << "YES" : cout << "NO";
     
 }
