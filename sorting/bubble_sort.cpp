@@ -1,28 +1,41 @@
-# include <iostream>
+#include <iostream>
+#include <vector>
 using namespace std;
-void swap(int &a, int &b){
-    int temp = a;
-    a = b;
-    b = temp;
-}
-int main(){
-    int n;
-    cin >> n;
 
-    int Arr[n];
-    for(int i = 0; i < n; i++){
-        cin >> Arr[i];
+int main() {
+    int N;
+    cin >> N;
+
+    vector<int> a(N);
+    for (int i = 0; i < N; i++) {
+        cin >> a[i];
     }
 
-    for(int i = 0 ;  i < n - 1; i++){
-        for(int j = 0 ; j < n; j++){
-            if(Arr[j] > Arr[j+1]){
-                swap(Arr[j], Arr[j+1]);
+    int pass = 1;
+
+    for (int i = 0; i < N - 1; i++) {
+        int swaps = 0;
+
+        for (int j = 0; j < N - 1 - i; j++) {
+            if (a[j] > a[j + 1]) {
+                swap(a[j], a[j + 1]);
+                swaps++;
             }
         }
+
+        cout << "Pass " << pass << ": ";
+
+        for (int k = 0; k < N; k++) {
+            cout << a[k];
+            if (k + 1 < N) cout << ' ';
+        }
+
+        cout << " , swaps = " << swaps << "\n";
+
+        pass++;
+
+        if (swaps == 0) break;
     }
 
-    for(int i=  0; i < n; i++){
-        cout << Arr[i];
-    }
+    return 0;
 }
