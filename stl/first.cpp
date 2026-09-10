@@ -1,4 +1,5 @@
 #include<bits/stdc++.h>
+#include <iostream>
 #include <ostream>
 #include <utility>
 using namespace std;
@@ -12,11 +13,10 @@ void explainVector(){
     vec.push_back(2);
     vec.push_back(4);
 
-    // cout << vec.size() << endl;
+    //
     for(int i = 0; i < vec.size(); i++){
-        cout << vec[i] << endl;
+        cout << vec[i];
     }
-
 }
 int main(){
     int res = pow(5, 2);
