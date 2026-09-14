@@ -3,6 +3,7 @@
 #include <iostream>
 #include <list>
 #include <map>
+#include <numeric>
 #include <queue>
 #include <unordered_map>
 #include <unordered_set>
@@ -131,6 +132,8 @@ void explain_multimap(){
         cout << (*i).first;
     }
 }
+
+// Algo
 void explain_Sort(){
     int arr[3] = {6,7,4};
 
@@ -151,9 +154,28 @@ void explain_Sort(){
     }
     cout << endl;
 }
+void explain_accumulate(){
+    int arr[5] = {1,2,3,4,4};
+    cout << accumulate(arr, arr+5, 0) << endl;
 
+    //
+    vector<int> vec = {1,2,3,4,5,5};
+    cout << accumulate(vec.begin(), vec.end(), 0) << endl;
+}
+void explain_count(){
+    int arr[5] = {1,1,1,2,3};
+    int apparence = 1;
+    cout << count(arr, arr+5, apparence) << endl;
+
+}
+void explain_nextpermutation(){
+    string str = "abc";
+    do {
+        cout << str << endl;
+    }while(next_permutation(str.begin(), str.end()));
+}
 int main(){
-    explain_Sort();
+    explain_nextpermutation();
 
     return 0;
 }
