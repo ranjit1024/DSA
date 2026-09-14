@@ -10,9 +10,11 @@ void vector_expain(){
     auto vec_first = nums.begin();
     auto vec_last = nums.end();
 
-    for(auto i = vec_first; i < vec_last; i++){
-        cout << *i << endl;
+
+    for(auto i : nums){
+        cout << i << " ";
     }
+
 }
 int main(){
     vector_expain();
