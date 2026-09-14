@@ -1,7 +1,10 @@
 # include <bits/stdc++.h>
 #include <iostream>
 #include <list>
+#include <map>
 #include <queue>
+#include <unordered_map>
+#include <unordered_set>
 
 using namespace std;
 void pair_explain (){
@@ -74,8 +77,61 @@ void explain_set(){
     auto ub = s.upper_bound(12);
     cout << *ub << endl;
 }
+void explain_multiset(){
+    multiset<int> marks = {1,1,1,1,1,2,3,3};
+    marks.insert(23);
+
+    for(auto it: marks){
+        cout << it << " ";
+    }
+    cout << endl;
+    marks.find(1);
+    marks.erase(marks.find(1));
+
+    for(auto it : marks){
+        cout << it << " ";
+    }
+    cout << endl;
+}
+void explain_unorderset(){
+    unordered_set<int> marks;
+    marks.insert(12);
+    marks.insert(45);
+    marks.insert(12);
+    marks.insert(100);
+
+    for(auto mi : marks){
+        cout << mi << " ";
+    }
+
+    cout << endl;
+}
+void expain_map(){
+    map<int, string> mpp;
+    mpp[1] = "ABC";
+    mpp[2] = "BCD";
+    mpp[3] = "cat";
+    mpp.insert({4, "Ranjit"});
+
+    auto it = mpp.find(4);
+    cout << (*it).second;
+}
+void expain_unsorted_map(){
+    unordered_map<int,int> mp;
+    mp.insert({12,12});
+}
+void explain_multimap(){
+    multimap<int , char> mmp;
+    mmp.insert({1, '1'});
+    mmp.insert({1, '1'});
+    mmp.insert({1, '1'});
+    auto it = mmp.equal_range(1);
+    for(auto i = it.first; i != it.second; i++){
+        cout << (*i).first;
+    }
+}
 int main(){
-    explain_set();
+    explain_multimap();
 
     return 0;
 }
