@@ -22,7 +22,20 @@ void explain_list(){
     }
     cout << endl;
 }
+void explain_stsck(){
+    stack<int> st;
+    st.push(12);
+    st.push(34);
+    st.push(100);
+    st.push(45);
+    st.push(65);
+
+    while(st.empty() == false){
+        cout << st.top() << " ";
+        st.pop();
+    }
+}
 int main(){
-    explain_list();
+    explain_stsck();
     return 0;
 }
