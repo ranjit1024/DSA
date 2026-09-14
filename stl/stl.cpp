@@ -130,6 +130,14 @@ void explain_multimap(){
         cout << (*i).first;
     }
 }
+
+void explain_Sort(){
+    int arr[3] = {3,5,6};
+    for(auto i : arr){
+        cout << i;
+    }
+}
+
 int main(){
     explain_multimap();
 
