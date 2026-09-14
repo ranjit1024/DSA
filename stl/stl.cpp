@@ -1,5 +1,7 @@
 # include <bits/stdc++.h>
 #include <iostream>
+#include <list>
+#include <queue>
 
 using namespace std;
 void pair_explain (){
@@ -23,6 +25,7 @@ void explain_list(){
     cout << endl;
 }
 void explain_stsck(){
+    // LIFO
     stack<int> st;
     st.push(12);
     st.push(34);
@@ -35,7 +38,23 @@ void explain_stsck(){
         st.pop();
     }
 }
+
+void explain_queue(){
+    //FIFO
+    queue<int> line;
+    line.push(12);
+    line.push(34);
+    line.push(45);
+
+    while (line.empty() == false) {
+        cout << line.front() << " ";
+        line.pop();
+    }
+    cout << endl;
+}
+
 int main(){
-    explain_stsck();
+    explain_queue();
+
     return 0;
 }
