@@ -1,3 +1,4 @@
+#include <algorithm>
 # include <bits/stdc++.h>
 #include <iostream>
 #include <list>
@@ -130,16 +131,29 @@ void explain_multimap(){
         cout << (*i).first;
     }
 }
-
 void explain_Sort(){
-    int arr[3] = {3,5,6};
-    for(auto i : arr){
-        cout << i;
+    int arr[3] = {6,7,4};
+
+    for(int i = 0; i < 3; i++){
+        cout << arr[i] << " ";
     }
+    sort(arr, arr+ 3);
+    cout << endl;
+    for(int i = 0; i < 3; i++){
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+    ////
+    vector<int> vec = {56,78,23,2,1,234};
+    sort( vec.begin(), vec.end());
+    for(auto v : vec){
+        cout << v <<  " ";
+    }
+    cout << endl;
 }
 
 int main(){
-    explain_multimap();
+    explain_Sort();
 
     return 0;
 }
