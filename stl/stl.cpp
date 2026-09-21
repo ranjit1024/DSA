@@ -21,6 +21,7 @@ void vector_expain(){
     }
     cout << endl;
 }
+
 void explain_list(){
     list<int>ls = {2,3};
     ls.push_front(1);
@@ -29,6 +30,7 @@ void explain_list(){
     }
     cout << endl;
 }
+
 void explain_stsck(){
     // LIFO
     stack<int> st;
