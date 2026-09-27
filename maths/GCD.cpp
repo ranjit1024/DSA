@@ -13,10 +13,10 @@ int main(){
         }
     }
     if(n2 == 0 ) {
-        cout << n1;
+        cout << n1 << endl;
     }
     else{
-        cout << n2;
+        cout << n2 << endl;
     }
-    cout << "Data is the king";
+  
 }
