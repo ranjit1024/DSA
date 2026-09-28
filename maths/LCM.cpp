@@ -1,26 +1,25 @@
 # include <iostream>
 using namespace std;
 int GCD(int n1, int n2){
-    while(n1 != 0 && n1 != 0){
+    while(n1 != 0 && n2 != 0){
         if(n1 > n2){
-            n2 = n1 % n2;
-
+            n1 = n1 % n2;
         }
         else{
-            n1 = n2 % n1;
+            n2 = n2 % n1;
         }
-
     }
-    if(n2 == 0){
-        return n1;
+    if(n1 == 0){
+        return n2;
     }
     else{
-        return n2;
+        return n1;
     }
 }
 int  main(){
-    int n1 = 3;
-    int n2 = 5;
-    int max_digit = max(n1, n2);
-
+    int n1 = 12;
+    int n2 = 18;
+    int gcd = GCD(n1,n2);
+    int LCM = (n1 * n2) / gcd;
+    cout << LCM;
 }
