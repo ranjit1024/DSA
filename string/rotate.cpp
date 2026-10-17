@@ -1,19 +1,18 @@
 # include<bits/stdc++.h>
 using namespace std;
-
+string rotate(string s){
+    char first = s[0];
+    string sub = s.substr(1, s.size()-1);
+    sub.push_back(first);
+    return sub;
+}
 int main(){
-    string s = "ABC";
-    string  all_permutatino[] = {""};
-    sort(s.begin(),  s.end());
-
-    do{
-
-        cout << s << "\n";
-        if(s == "BCA"){
-            cout << "Match";
-        }
-    }while(next_permutation(s.begin(), s.end()));
-
-
-    cout << s << endl;
+    string s = "abcde";
+    string target = "cdeab";
+    string first = rotate(s);
+    string second = rotate(first);
+    if(second == target) {
+        cout << "Matched";
+    }
+  
 }
