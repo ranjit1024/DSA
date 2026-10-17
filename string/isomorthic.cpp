@@ -1,17 +1,21 @@
-# include <bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-int main(){
-    string s = "dfads";
-    string t = "apple";
-    int m1[256] = {0} , m2[256] = {0};
-    int n = s.size();
-    for(int i = 0; i < n; ++i){
-        if(m1[s[i]] != m2[t[i]]) return false;
-        m1[s[i]] = i + 1;
-        m2[t[i]] = i + 1;
+int main() {
+    string s = "abcde";
+    string target = "hkjlj";
 
+    string ds = s + s;
+
+    cout << ds << endl;
+
+    size_t pos = ds.find(target);
+
+    if (pos != string::npos) {
+        cout << "Found at index: " << pos << endl;
+    } else {
+        cout << "Not found" << endl;
     }
 
-    cout << endl;
+    return 0;
 }
