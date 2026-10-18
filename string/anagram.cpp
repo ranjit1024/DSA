@@ -2,15 +2,13 @@
 using namespace std;
 
 int main(){
-    string s = "anagram";
-    string t = "nagaram";
-    string ds = s  + s;
-    cout << ds << endl;
-    if(ds.find(t) != string::npos){
-        cout << " found";
-    }else{
-        cout << "Not Found";
+    int s_hash[26] = {0} ;
+    string name = "ranjit";
+    for(int i = 0; i < 25; i++){
+        s_hash[name[i] - 'a'] ++;
     }
-    cout << "Hello World" << endl;
+    for(int i = 0 ; i <  26; i++){
+        cout << s_hash[i] << " " ;
+    }
 
 }
