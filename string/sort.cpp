@@ -5,7 +5,7 @@ bool comparator(int a, int b){
 }
 int main(){
   
-    int arr[] = {5,2,8,1,3};
+    inPt arr[] = {5,2,8,1,3};
     int n = 5;
     sort(arr, arr + n, comparator);
     for(int i = 0; i < n; i++){
