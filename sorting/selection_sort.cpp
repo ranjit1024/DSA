@@ -1,28 +1,22 @@
-
-#include <bits/stdc++.h>
+# include<bits/stdc++.h>
 using namespace std;
 
-int main() {
-    vector<int> arr = {5, 6, 1, 2, 3, 4};
+int main(){
+    vector <int> nums = {5,6,8,9,1};
 
-    for (int i = 0; i < arr.size() - 1; i++) {
-
+    for(int i = 0; i < nums.size() - 1; i++){
         int minIndex = i;
-
-        // Find minimum element
-        for (int j = i + 1; j < arr.size(); j++) {
-            if (arr[j] < arr[minIndex]) {
+        for(int j = i; j < nums.size(); j++){
+            if(nums[j] < nums[minIndex]){
                 minIndex = j;
             }
         }
-
-        // Swap after finding minimum
-        int temp = arr[minIndex];
-        arr[minIndex] = arr[i];
-        arr[i] = temp;
+        int temp = nums[minIndex];
+        nums[minIndex] = nums[i];
+        nums[i] =  temp;
     }
 
-    for (int i = 0; i < arr.size(); i++) {
-        cout << arr[i] << " ";
+    for(int i = 0; i < nums.size(); i++){
+        cout <<  nums[i];
     }
 }
