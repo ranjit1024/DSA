@@ -1,23 +1,28 @@
+
 #include <bits/stdc++.h>
 using namespace std;
 
-void selection_sort(int arr[], int n){
-    for(int i = 0; i < n-1; i++){
-        int mini = i;
-        for(int j = i + 1; j < n; j++){
-            if(arr[j] < arr[mini]){
-                mini = j;
-            }
+int main() {
+    vector<int> arr = {5, 6, 1, 2, 3, 4};
 
+    for (int i = 0; i < arr.size() - 1; i++) {
+
+        int minIndex = i;
+
+        // Find minimum element
+        for (int j = i + 1; j < arr.size(); j++) {
+            if (arr[j] < arr[minIndex]) {
+                minIndex = j;
+            }
         }
-        
+
+        // Swap after finding minimum
+        int temp = arr[minIndex];
+        arr[minIndex] = arr[i];
+        arr[i] = temp;
     }
-}
-int main(){
-    int n ;
-    cin >> n;
-    int arr[n];
-    for (int i= 0; i < n; i++){
-        cin >> arr[i];
+
+    for (int i = 0; i < arr.size(); i++) {
+        cout << arr[i] << " ";
     }
 }
