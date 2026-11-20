@@ -15,5 +15,3 @@ int main(){
     cout << gcd;
     cout << "Datahse";
 }
-
-kjhkjh
