@@ -22,4 +22,5 @@ int  main(){
     int gcd = GCD(n1,n2);
     int LCM = (n1 * n2) / gcd;
     cout << LCM;
+    cout << "fadfa";
 }
