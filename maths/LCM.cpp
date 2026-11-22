@@ -24,3 +24,4 @@ int  main(){
     cout << LCM;
     cout << "fadfa";
 }
+cout << "Hello World ";
