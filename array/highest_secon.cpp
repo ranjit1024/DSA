@@ -10,7 +10,7 @@ int main(){
             max = nums[i];
         }
     }
-
+    
     for(int i = 0; i < nums.size(); i++){
         if(nums[i] > second_highest && nums[i] != max){
             second_highest = nums[i];
