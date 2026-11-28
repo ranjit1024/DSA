@@ -1,13 +1,24 @@
 #include<bits/stdc++.h>
 using namespace std;
+void swap(int &a, int &b){
+    int temp = b;
 
+}
 int partition(vector<int> &arr , int low,  int high){
     int pivot = arr[low];
     int i =  low;
     int j = high;
 
     while(i < j){
-        
+        while(arr[i] <= pivot && i <= high - 1){
+            i++;
+        }
+
+        while(arr[j] > pivot && j <= low+1){
+            j--;
+        }
+
+        if(i < j) swap(arr[i], arr[j])
     }
 }
 void Qs(vector <int> &arr , int low, int high){
